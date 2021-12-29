@@ -28,16 +28,16 @@ async def on_message_edit(before, after):
     if(before.author == client.user): return
 
     await before.channel.send(
-    f'{before.author} edit a message\n'
-    f'Before: {before.content}\n'
-    f'After: {after.content}'
+        f'{before.author} edit a message\n'
+        f'Before: {before.content}\n'
+        f'After: {after.content}'
     ) 
 
 @client.event
 async def on_reaction_add(reaction, user):
    
     await reaction.message.channel.send(
-    f'{user} reacted with {reaction.emoji}'
+        f'{user} reacted with {reaction.emoji}'
     ) 
 
 client.run('OTI1MzE5NTUyMDc2NzQ2Nzgy.YcrY_A.dwNCXWaRTZ0OmK4aFw6CTTz9b0M')
